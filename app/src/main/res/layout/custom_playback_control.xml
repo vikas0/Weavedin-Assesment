@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/margin_1"
+    android:background="@android:color/white"
+    tools:context=".activities.PlayerActivity">
+
+    <com.google.android.exoplayer2.ui.DefaultTimeBar
+        android:id="@id/exo_progress"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin_0"
+     android:backgroundTint="@color/colorPrimary"
+        app:played_color="@color/colorPrimary"
+        app:buffered_color="@color/grey_0"
+        app:unplayed_color="@color/grey_1"
+
+        android:layout_height="16dp"/>
+
+    <TextView android:id="@id/exo_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/exo_progress"
+        android:layout_below="@+id/exo_progress"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:includeFontPadding="false"
+        android:textColor="#FFBEBEBE"/>
+    <TextView android:id="@id/exo_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/exo_progress"
+        android:layout_below="@+id/exo_progress"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:includeFontPadding="false"
+        android:textColor="#FFBEBEBE"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:layout_below="@id/exo_progress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_1"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/artist_name-collection_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_0"
+        android:layout_below="@id/title"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/artist_name-collection_name"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/margin_2"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_image"
+            android:padding="@dimen/margin_00"
+            android:onClick="gotoList"
+
+            android:src="@drawable/combined_shape"
+            android:layout_marginRight="@dimen/margin_1"
+            />
+
+        <ImageButton android:id="@id/exo_play"
+            android:src="@drawable/triangle"
+            style="@style/ExoMediaButton.Play"/>
+
+        <ImageButton android:id="@id/exo_pause"
+            android:src="@drawable/combined_shape_2"
+            style="@style/ExoMediaButton.Pause"/>
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/make_fav"
+        android:src="@drawable/shape_heart"
+        android:padding="@dimen/margin_00"
+
+        android:layout_marginLeft="@dimen/margin_1"
+        />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+<!--<RelativeLayout-->
+<!--android:layout_width="@dimen/image_size_0"-->
+<!--android:layout_height="@dimen/image_size_0"> </RelativeLayout>-->
